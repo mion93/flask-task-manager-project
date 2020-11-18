@@ -9,3 +9,7 @@
 .flash h4 {
     line-height: 2;
 }
+
+.h4, h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
