@@ -81,7 +81,7 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    #grab the session user's username from db
+    # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
@@ -91,10 +91,16 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    #remove user from session cookies
+    # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/add_task")
+def add_task():
+    return render_template("add_task.html")
+
 
 
 if __name__ == "__main__":
