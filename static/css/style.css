@@ -5,3 +5,7 @@
 .brand-logo {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.flash h4 {
+    line-height: 2;
+}
